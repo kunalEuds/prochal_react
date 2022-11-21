@@ -1,0 +1,10 @@
+import * as React from 'react';
+import { GridColumnMenuSort, GridColumnMenuFilter, GridColumnMenuGroup } from '@progress/kendo-react-grid';
+// import RiskData from "./Data/Riskmitigationplan.json";
+export const ColumnMenu = props => {
+  return <div>
+        <GridColumnMenuSort {...props} />
+        <GridColumnMenuFilter {...props} />
+        <GridColumnMenuGroup {...props} />
+      </div>;
+};
