@@ -13,9 +13,7 @@ import { FaAddressBook,FaEdit,FaTrash,FaUpload } from 'react-icons/fa';
 const MasterProjectList = () => {
   const navigate= useNavigate();
  
-  // document.getElementsByClassName('projectSelect').onClick= function(){
-  //   alert('hello')
-  // }
+ 
   $(document).on("click", ".projectSelect", function(){
     let path = '/Home/MisReport'; 
     navigate(path);
