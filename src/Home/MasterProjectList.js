@@ -19,6 +19,8 @@ const MasterProjectList = () => {
   $(document).on("click", ".projectSelect", function(){
     let path = '/Home/MisReport'; 
     navigate(path);
+    $('.MainSdbr').addClass('d-none');
+    $('.RiskSdbr').removeClass('d-none');
  });
 
  useEffect(() => {

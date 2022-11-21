@@ -802,7 +802,7 @@ window.location.reload();
 
 
  
-  const menuItem = [
+  const menuItemMainSdbr = [
     {
       path: "/",
       name: "Dashboard",
@@ -812,7 +812,9 @@ window.location.reload();
         path: "/Home/MasterProjectList",
         name: "Master-Project",
         icon: logo2,
-    },
+    }    
+  ];
+  const menuItemRiskSdbr = [    
     {
         path:"/Risk Management/RiskRegister",
         name:"Risk Register",
@@ -906,11 +908,28 @@ return (
                                   </ul>
                               </li> */}
             {/* </ul> */}
-            {menuItem.map((item, index) => (
+            {menuItemMainSdbr.map((item, index) => (
       <NavLink
         to={item.path}
         key={index}
-        className="link"
+        className="link MainSdbr"
+      //   activeclassName="active"
+      >
+        <div className="icon"><img src={item.icon} style={{height:'30px'}}/></div>
+        <div
+          // style={{ display:"block"}}
+          className="link_text"
+        >
+          {item.name}
+        </div>
+      </NavLink>
+    ))}
+
+{menuItemRiskSdbr.map((item, index) => (
+      <NavLink
+        to={item.path}
+        key={index}
+        className="link RiskSdbr d-none"
       //   activeclassName="active"
       >
         <div className="icon"><img src={item.icon} style={{height:'30px'}}/></div>
